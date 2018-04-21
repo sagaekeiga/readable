@@ -22,13 +22,10 @@
 #  index_users_on_reset_password_token  (reset_password_token) UNIQUE
 #
 
-class User < ApplicationRecord
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable and :omniauthable
-  devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
-   # -------------------------------------------------------------------------------
-   # Relations
-   # -------------------------------------------------------------------------------
-   has_many :items
+FactoryBot.define do
+  factory :user do
+    sequence(:email) { |n| "user#{n}@example.com" }
+    password 'hogehoge'
+    password_confirmation 'hogehoge'
+  end
 end

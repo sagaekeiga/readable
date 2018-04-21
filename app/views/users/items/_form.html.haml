@@ -1,0 +1,19 @@
+= form_for [:users, item], html: { class: 'form-horizontal' } do |f|
+  = render 'shared/error_messages', resource: item
+  .form-group
+    %hr
+  .form-group
+    = f.label :title, class: 'col-xs-12 col-sm-4 control-label'
+    .col-xs-12.col-sm-8
+      = f.text_field :title, class: 'form-control'
+  .form-group
+    = f.label :body, class: 'col-xs-12 col-sm-4 control-label'
+    .col-xs-12.col-sm-8
+      = f.text_area :body, class: 'form-control'
+  .form-group
+    = f.label :code, class: 'col-xs-12 col-sm-4 control-label'
+    .col-xs-12.col-sm-8
+      = f.text_area :code, class: 'form-control'
+  .form-group
+    .col-xs-12.col-sm-4.col-sm-offset-4
+      = f.submit t('.submit'), class: 'btn btn-primary'

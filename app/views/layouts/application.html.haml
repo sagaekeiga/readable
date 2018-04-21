@@ -5,21 +5,17 @@
     %meta{ name: 'viewport', content: 'width=device-width, initial-scale=1.0' }
     %title readable
     = csrf_meta_tags
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
     = javascript_pack_tag 'application'
-  %body
-    %header
-      %nav
-        - if user_signed_in?
-          %strong
-            = link_to 'プロフィール変更', edit_user_registration_path
-            = link_to 'ログアウト', destroy_user_session_path, method: :delete
-        - else
-          = link_to 'サインアップ', new_user_registration_path
-          = link_to 'ログイン', new_user_session_path
+  %body{ class: "#{controller_name}-#{action_name}" }
+    .container
+      - if user_signed_in?
+        = render 'users_navbar'
+      - else
+        = render 'navbar'
 
-    - !content_for?(:flash) && flash && flash.each do |key, message|
-      .alert{ class: "alert-key", role: 'alert' }
-        %strong= message
-    = yield
+      - !content_for?(:flash) && flash && flash.each do |key, message|
+        .alert{ class: "alert-key", role: 'alert' }
+          %strong= message
+      = yield

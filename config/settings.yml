@@ -1,0 +1,9 @@
+meta:
+  site: Readable
+  title: Readable
+  description: 睡眠の技術による生産性向上プログラム
+  keywords: キーワード1,キーワード2,キーワード3
+og:
+  title: ページタイトル
+  type: article
+  image: /og.png

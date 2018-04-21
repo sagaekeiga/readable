@@ -1,0 +1,72 @@
+ja:
+  activerecord:
+    models:
+      user: ユーザー
+    attributes:
+      user:
+        email: Eメール
+        name: 名前
+  enums:
+    users:
+      profile:
+        gender:
+          woman: 女性
+          man: 男性
+
+  users: &default_user
+    my_page:
+      <<: *default_user
+      title: マイページ
+    sessions:
+      new:
+        title: ユーザーでログイン
+        sub_titles:
+          login_with_email_and_password: メールアドレスとパスワードでログインする
+          login_with_oauth: 続行するには、ログイン、または、無料会員登録をお願いします。
+          no_account: アカウントをお持ちではありませんか？
+        forgot_password: パスワードをお忘れの方はこちら
+      create:
+        title: ログイン
+
+    registrations:
+      new:
+        title: 新規ユーザー登録
+        sub_titles:
+          sign_up_with_email_and_password: 情報を入力して会員登録する
+          sign_up_with_oauth: SNSアカウントで会員登録する
+          already_have_account: 既にアカウントをお持ちの場合
+      edit:
+        slack_example: slackのurlを入力してください
+        note_example: 自己紹介を入力してください
+        users/profile:
+          title: プロフィール編集
+          label:
+            user_profiles: 自己紹介
+      create:
+        title: 新規アカウントの登録
+        rejecting_acceptance: 利用規約に同意してください
+        failure: 登録に失敗しました
+    passwords:
+      new:
+        title: パスワードをお忘れですか？
+        description: アカウント登録時に設定したメールアドレス宛にパスワードの再設定方法を送信します。
+        placeholders:
+          email: アカウント登録したときのメールアドレスを入力してください
+      edit:
+        title: パスワードの再設定
+        description: 新しいパスワードを設定することで、サービスを再び利用することができるようになります。
+        new_password: 新しいパスワード
+        new_password_confirmation: 新しいパスワード（確認）
+        sub_titles:
+          renew_password: パスワードの再設定を行う
+          found_password: パスワードが見つかりましたか？
+        placeholders:
+          new_password: 半角英数字で8文字から128文字まで入力できます
+          new_password_confirmation: 上記で入力したパスワードと同じものを入力してください
+    items:
+      new:
+        title: 投稿
+      edit:
+        title: 編集する
+      form:
+        submit: 投稿する
