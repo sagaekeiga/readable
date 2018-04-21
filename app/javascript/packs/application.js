@@ -6,7 +6,6 @@
 //
 // To reference this file, add <%= javascript_pack_tag 'application' %> to the appropriate
 // layout file, like app/views/layouts/application.html.erb
-
 $(document).on('turbolinks:load', function() {
   return $('input[type="file"]').fileinput({
     showUpload: false,

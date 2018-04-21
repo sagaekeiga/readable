@@ -17,6 +17,7 @@
 //= require bootstrap
 //= require bootstrap-sprockets
 //= require cocoon
+//= require highlight_pack
 //= require turbolinks
 //= require_tree .
 'use strict';

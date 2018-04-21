@@ -111,6 +111,7 @@ gem 'i18n-tasks'
 gem 'google-analytics-rails'
 gem 'dotenv-rails'
 gem 'webpacker'
+gem 'rails-highlightjs'
 group :development, :test do
   gem 'timecop'
   gem 'rspec'

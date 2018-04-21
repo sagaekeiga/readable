@@ -1,0 +1,8 @@
+.welcome-feed-wrapper
+  .col-xs-12.col-sm-8.col-sm-offset-2
+    - @items.each do |item|
+      %h3= link_to item.title, item
+      %p
+        = item.body
+        %hr
+        = item.code

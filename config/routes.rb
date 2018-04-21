@@ -24,6 +24,7 @@ Rails.application.routes.draw do
       confirmations: 'users/confirmations',
       sessions: 'users/sessions'
     }
+    resources :items
     namespace :users do
       resources :items
     end

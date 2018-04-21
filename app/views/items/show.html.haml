@@ -1,0 +1,9 @@
+#item_id.item-content-wrapper{ 'item-id': @item.id }
+  .col-xs-12
+    %h1= @item.title
+    %p
+      = @item.body
+      %hr
+      %pre
+        %code.ruby= @item.code
+= javascript_pack_tag 'highlight'
