@@ -1299,7 +1299,6 @@ DEPENDENCIES
   draper
   enum_help
   erb2haml
-  factory_bot
   factory_bot_rails
   faker
   faker-japanese
