@@ -1,5 +1,13 @@
 {
   "name": "readable",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "@rails/webpacker": "3.4",
+    "jquery": "^3.3.1",
+    "jquery-ui": "^1.12.1",
+    "jquery-ujs": "^1.2.2"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "2.11.2"
+  }
 }
